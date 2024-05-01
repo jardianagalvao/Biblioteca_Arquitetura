@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ControleBiblioteca",
+            "request": "launch",
+            "mainClass": "controlebiblioteca.control.ControleBiblioteca",
+            "projectName": "ControleBiblioteca_81d4c760"
+        },
+        {
+            "type": "java",
+            "name": "ControleBiblioteca",
+            "request": "launch",
+            "mainClass": "controlebiblioteca.ControleBiblioteca.ControleBiblioteca",
+            "projectName": "ControleBiblioteca_81d4c760"
+        },
+        {
+            "type": "java",
+            "name": "Executar",
+            "request": "launch",
+            "mainClass": "ControleBiblioteca",
+            "projectName": "ControleBiblioteca",
+            "args": ""
+        }
+    ]
+}
