@@ -1,10 +1,12 @@
 package controlebiblioteca.view;
 
+import java.awt.Dimension;
 import java.util.List;
-
 import javax.swing.JOptionPane;
-
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import controlebiblioteca.model.Livro;
+import java.awt.Font;
 
 public class TelaManutencaoLivros extends javax.swing.JFrame {
     private controlebiblioteca.model.ControleLivros controleLivros;
@@ -15,6 +17,9 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
     }
 
     private void initComponents() {
+
+        Font fonte = new Font("Roboto", Font.PLAIN, 18); // Substitua "Arial" pelo tipo de fonte desejado
+
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -22,19 +27,19 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         codigoLivro = new javax.swing.JTextField();
-        tituloLivro = new javax.swing.JTextField();
-        autor = new javax.swing.JTextField();
+        tituloLivro = new javax.swing.JTextField(30);
+        autor = new javax.swing.JTextField(30);
         isbn = new javax.swing.JTextField();
         ano = new javax.swing.JTextField();
         botaoConsultar = new javax.swing.JButton();
         botaoIncluir = new javax.swing.JButton();
         botaoExcluir = new javax.swing.JButton();
         botaoAlterar = new javax.swing.JButton();
-        botaoLimpar = new javax.swing.JButton(); // Adicionando botão para limpar campos
-        botaoListar = new javax.swing.JButton(); // Adicionando botão para listar livros
+        botaoLimpar = new javax.swing.JButton();
+        botaoListar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Biblioteca Arquitetura");
+        setTitle("Biblioteca Arquitetura de Sistemas");
 
         jLabel1.setText("Sistema Controle de Biblioteca");
 
@@ -47,6 +52,28 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
         jLabel5.setText("ISBN:");
 
         jLabel6.setText("Ano:");
+
+        jLabel1.setFont(fonte);
+        jLabel2.setFont(fonte);
+        jLabel3.setFont(fonte);
+        jLabel4.setFont(fonte);
+        jLabel5.setFont(fonte);
+        jLabel6.setFont(fonte);
+
+        // Definindo a fonte para os componentes JTextField
+        codigoLivro.setFont(fonte);
+        tituloLivro.setFont(fonte);
+        autor.setFont(fonte);
+        isbn.setFont(fonte);
+        ano.setFont(fonte);
+
+        // Definindo a fonte para os botões
+        botaoConsultar.setFont(fonte);
+        botaoIncluir.setFont(fonte);
+        botaoExcluir.setFont(fonte);
+        botaoAlterar.setFont(fonte);
+        botaoLimpar.setFont(fonte);
+        botaoListar.setFont(fonte);
 
         botaoConsultar.setText("Consultar");
         botaoConsultar.addActionListener(new java.awt.event.ActionListener() {
@@ -76,14 +103,14 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
             }
         });
 
-        botaoLimpar.setText("Limpar"); // Configurando botão para limpar campos
+        botaoLimpar.setText("Limpar");
         botaoLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoLimparActionPerformed(evt);
             }
         });
 
-        botaoListar.setText("Listar"); // Adicionando botão para listar livros
+        botaoListar.setText("Listar");
         botaoListar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoListarActionPerformed(evt);
@@ -198,10 +225,10 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
                                         .addComponent(botaoExcluir)
                                         .addComponent(botaoAlterar)
                                         .addComponent(botaoLimpar)
-                                        .addComponent(botaoListar)) // Adicionando botão ao layout
+                                        .addComponent(botaoListar))
                                 .addContainerGap(50, Short.MAX_VALUE)));
+        setSize(800, 600); // Define o tamanho da janela como 800x600 pixels
 
-        pack();
     }
 
     private void botaoConsultarActionPerformed(java.awt.event.ActionEvent evt) {
@@ -269,7 +296,12 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
         }
 
         // Exibir a lista de livros como uma mensagem
-        JOptionPane.showMessageDialog(null, livrosStr.toString(), "Livros Cadastrados",
+        JTextArea textArea = new JTextArea(livrosStr.toString());
+        textArea.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        scrollPane.setPreferredSize(new Dimension(500, 400)); // Definindo o tamanho do scrollPane
+
+        JOptionPane.showMessageDialog(null, scrollPane, "Livros Cadastrados",
                 JOptionPane.INFORMATION_MESSAGE);
     }
 
@@ -287,8 +319,8 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
     private javax.swing.JButton botaoConsultar;
     private javax.swing.JButton botaoExcluir;
     private javax.swing.JButton botaoIncluir;
-    private javax.swing.JButton botaoLimpar; // Adicionando botão de limpar
-    private javax.swing.JButton botaoListar; // Adicionando botão para listar livros
+    private javax.swing.JButton botaoLimpar;
+    private javax.swing.JButton botaoListar;
     private javax.swing.JTextField codigoLivro;
     private javax.swing.JTextField isbn;
     private javax.swing.JLabel jLabel1;
