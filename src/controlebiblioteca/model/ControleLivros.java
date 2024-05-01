@@ -59,6 +59,7 @@ public class ControleLivros {
         } catch (SQLException e) {
             e.printStackTrace();
             // Lidar com erro de atualização
+            
         }
     }
 
