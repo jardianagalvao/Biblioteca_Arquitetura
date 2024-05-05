@@ -1,27 +1,33 @@
+# Controle de Biblioteca
 
-Sistema de Controle de Biblioteca
-Este é um projeto de sistema de controle de biblioteca desenvolvido para a disciplina de Arquitetura de Sistemas da Universidade de Fortaleza (Unifor).
+Este é um projeto de sistema de controle de biblioteca, desenvolvido como parte de um trabalho acadêmico.
 
-Descrição
-O sistema de controle de biblioteca permite gerenciar o acervo de livros de uma biblioteca, oferecendo funcionalidades como cadastro de livros, consulta, exclusão e alteração de informações. Além disso, o sistema também inclui a implementação de um serviço web para demonstrar uma funcionalidade que a aplicação pode consultar.
+## Implementação
 
-Padrões Utilizados
-O projeto foi desenvolvido seguindo os padrões MVC (Model-View-Controller) e camadas (layers), garantindo uma organização estrutural clara e separação de responsabilidades. A arquitetura MVC divide a aplicação em três componentes principais:
+O sistema foi organizado utilizando os padrões MVC e Camadas (Layers), refletido no código implementado. As funcionalidades são divididas entre:
 
-Model: Responsável pela lógica de negócios e acesso aos dados.
-View: Responsável pela interface do usuário e apresentação dos dados.
-Controller: Responsável pela comunicação entre o Model e a View, interpretando as entradas do usuário e direcionando as ações apropriadas.
-Além disso, a arquitetura em camadas separa a aplicação em diferentes níveis de abstração, como apresentação, lógica de negócios e acesso aos dados, promovendo uma melhor organização e manutenção do código.
+- **Model**: Responsável pela representação dos dados e lógica de negócios.
+- **View**: Camada de apresentação, interação com o usuário.
+- **Controller**: Responsável pela comunicação entre a View e o Model.
 
-Implementação do Serviço
-Como parte do projeto, foi implementado um serviço web para demonstrar uma funcionalidade que a aplicação pode consultar. O serviço foi desenvolvido seguindo os princípios REST (Representational State Transfer), garantindo uma comunicação eficiente e escalável entre os diferentes componentes da aplicação.
+## Serviço Implementado
 
-O serviço pode ser acessado através de uma API RESTful, oferecendo endpoints para realizar operações específicas, como consulta de informações sobre livros, autores, editoras, entre outros.
+Implementamos um serviço web para demonstrar uma funcionalidade do sistema de controle de biblioteca. O serviço pode ser acessado via REST, SOAP ou GRPC. Nossa implementação é baseada em REST e pode ser encontrada no diretório `servico/`.
 
-Tecnologias Utilizadas
-O projeto foi desenvolvido utilizando as seguintes tecnologias:
+## Executando o Projeto
 
-Linguagem de Programação: Java
-Framework: Spring Boot (para o serviço web)
-Banco de Dados: MySQL
-Ferramentas de Desenvolvimento: Visual Studio Code, Git
+Para executar o projeto localmente, siga estas etapas:
+
+1. Clone este repositório.
+2. Navegue até o diretório do projeto.
+3. Execute o aplicativo principal.
+
+## Tecnologias Utilizadas
+
+- Linguagem de Programação: [Java](https://www.java.com/)
+- Framework MVC: [Spring Framework](https://spring.io/)
+- Serviço Web: [Spring Boot](https://spring.io/projects/spring-boot)
+
+---
+
+© 2024 Equipe Controle de Biblioteca
