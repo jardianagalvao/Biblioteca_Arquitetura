@@ -1,6 +1,6 @@
 # Controle de Biblioteca
 
-Este é um projeto de sistema de controle de biblioteca, desenvolvido como parte de um trabalho acadêmico.
+Este é um projeto de sistema de controle de biblioteca, desenvolvido como parte do trabalho acadêmico da Disciplina Arquitetura de Sistemas, do Curso de Análise e Desenvolvimento de Sistemas - Unifor.
 
 ## Implementação
 
