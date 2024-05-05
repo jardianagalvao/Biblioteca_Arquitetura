@@ -6,6 +6,13 @@
             "name": "ControleBiblioteca",
             "request": "launch",
             "mainClass": "controlebiblioteca.control.ControleBiblioteca",
+            "projectName": "Biblioteca_Arquitetura_21d4830e"
+        },
+        {
+            "type": "java",
+            "name": "ControleBiblioteca",
+            "request": "launch",
+            "mainClass": "controlebiblioteca.control.ControleBiblioteca",
             "projectName": "ControleBiblioteca_81d4c760"
         },
         {

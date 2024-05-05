@@ -24,7 +24,7 @@ public class ControleBiblioteca {
                 tml.getCodigoLivro(),
                 tml.getTituloLivro(),
                 tml.getAutor(),
-                tml.getISBN(),
+                tml.getEditora(),
                 Integer.parseInt(tml.getAno()));
         controleLivros.incluirLivro(umLivro);
     }

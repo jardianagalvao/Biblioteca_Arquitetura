@@ -22,12 +22,12 @@ public class ControleLivros {
     }
 
     public void incluirLivro(Livro livro) {
-        String sql = "INSERT INTO livros (codigo, titulo, autor, ISBN, ano) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO livros (codigo, titulo, autor, editora, ano) VALUES (?, ?, ?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, livro.getCodigoLivro());
             statement.setString(2, livro.getTitulo());
             statement.setString(3, livro.getAutor());
-            statement.setString(4, livro.getISBN());
+            statement.setString(4, livro.getEditora());
             statement.setInt(5, livro.getAno());
             statement.executeUpdate();
         } catch (SQLException e) {
@@ -48,18 +48,18 @@ public class ControleLivros {
     }
 
     public void alterarLivro(Livro livro) {
-        String sql = "UPDATE livros SET titulo = ?, autor = ?, ISBN = ?, ano = ? WHERE codigo = ?";
+        String sql = "UPDATE livros SET titulo = ?, autor = ?, editora = ?, ano = ? WHERE codigo = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, livro.getTitulo());
             statement.setString(2, livro.getAutor());
-            statement.setString(3, livro.getISBN());
+            statement.setString(3, livro.getEditora());
             statement.setInt(4, livro.getAno());
             statement.setString(5, livro.getCodigoLivro());
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
             // Lidar com erro de atualização
-            
+
         }
     }
 
@@ -74,7 +74,7 @@ public class ControleLivros {
                         resultSet.getString("codigo"),
                         resultSet.getString("titulo"),
                         resultSet.getString("autor"),
-                        resultSet.getString("ISBN"),
+                        resultSet.getString("editora"),
                         resultSet.getInt("ano"));
             }
         } catch (SQLException e) {
@@ -94,7 +94,7 @@ public class ControleLivros {
                         resultSet.getString("codigo"),
                         resultSet.getString("titulo"),
                         resultSet.getString("autor"),
-                        resultSet.getString("ISBN"),
+                        resultSet.getString("editora"),
                         resultSet.getInt("ano"));
                 livros.add(livro);
             }

@@ -7,7 +7,6 @@ public class Livro {
     private String titulo;
     private String autor;
     private String editora;
-    private String ISBN;
     private Integer ano;
 
     public Livro(String codigoLivro, String titulo, String autor, String editora, Integer ano) {
@@ -17,7 +16,6 @@ public class Livro {
         this.titulo = titulo;
         this.autor = autor;
         this.editora = editora;
-        this.ISBN = ISBN;
         this.ano = ano;
     }
 
@@ -53,14 +51,6 @@ public class Livro {
         this.editora = editora;
     }
 
-    public String getISBN() {
-        return ISBN;
-    }
-
-    public void setISBN(String iSBN) {
-        ISBN = iSBN;
-    }
-
     public Integer getAno() {
         return ano;
     }
@@ -72,7 +62,7 @@ public class Livro {
     @Override
     public String toString() {
         return "Livro{" + "codigoLivro=" + codigoLivro + ", titulo=" + titulo + ", autor=" +
-                autor + ", editora=" + editora + ", ISBN=" + ISBN + ", ano=" + ano + '}';
+                autor + ", editora=" + editora + ", ano=" + ano + '}';
     }
 
     @Override

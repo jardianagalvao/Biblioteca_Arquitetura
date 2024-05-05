@@ -29,7 +29,7 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
         codigoLivro = new javax.swing.JTextField();
         tituloLivro = new javax.swing.JTextField(30);
         autor = new javax.swing.JTextField(30);
-        isbn = new javax.swing.JTextField();
+        editora = new javax.swing.JTextField();
         ano = new javax.swing.JTextField();
         botaoConsultar = new javax.swing.JButton();
         botaoIncluir = new javax.swing.JButton();
@@ -49,7 +49,7 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
 
         jLabel4.setText("Autor:");
 
-        jLabel5.setText("ISBN:");
+        jLabel5.setText("Editora:");
 
         jLabel6.setText("Ano:");
 
@@ -64,7 +64,7 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
         codigoLivro.setFont(fonte);
         tituloLivro.setFont(fonte);
         autor.setFont(fonte);
-        isbn.setFont(fonte);
+        editora.setFont(fonte);
         ano.setFont(fonte);
 
         // Definindo a fonte para os botões
@@ -141,7 +141,7 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
                                                                 .addComponent(jLabel5)
                                                                 .addPreferredGap(
                                                                         javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(isbn,
+                                                                .addComponent(editora,
                                                                         javax.swing.GroupLayout.PREFERRED_SIZE, 86,
                                                                         javax.swing.GroupLayout.PREFERRED_SIZE))
                                                         .addGroup(layout.createSequentialGroup()
@@ -209,7 +209,7 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel5)
-                                        .addComponent(isbn, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        .addComponent(editora, javax.swing.GroupLayout.PREFERRED_SIZE,
                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -237,7 +237,7 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
         if (umLivro != null) {
             this.tituloLivro.setText(umLivro.getTitulo());
             this.autor.setText(umLivro.getAutor());
-            this.isbn.setText(umLivro.getISBN());
+            this.editora.setText(umLivro.getEditora());
             this.ano.setText(String.valueOf(umLivro.getAno()));
         } else {
             JOptionPane.showMessageDialog(null, "Livro Inexistente");
@@ -249,7 +249,7 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
                 this.codigoLivro.getText(),
                 this.tituloLivro.getText(),
                 this.autor.getText(),
-                this.isbn.getText(),
+                this.editora.getText(),
                 Integer.parseInt(this.ano.getText()));
         controleLivros.incluirLivro(umLivro);
         JOptionPane.showMessageDialog(null, "Livro incluído com sucesso!");
@@ -266,7 +266,7 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
                 this.codigoLivro.getText(),
                 this.tituloLivro.getText(),
                 this.autor.getText(),
-                this.isbn.getText(),
+                this.editora.getText(),
                 Integer.parseInt(this.ano.getText()));
         controleLivros.alterarLivro(umLivro);
         JOptionPane.showMessageDialog(null, "Livro alterado com sucesso!");
@@ -277,7 +277,7 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
         codigoLivro.setText("");
         tituloLivro.setText("");
         autor.setText("");
-        isbn.setText("");
+        editora.setText("");
         ano.setText("");
     }
 
@@ -291,7 +291,7 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
             livrosStr.append("Código: ").append(livro.getCodigoLivro()).append(", ")
                     .append("Título: ").append(livro.getTitulo()).append(", ")
                     .append("Autor: ").append(livro.getAutor()).append(", ")
-                    .append("ISBN: ").append(livro.getISBN()).append(", ")
+                    .append("Editora: ").append(livro.getEditora()).append(", ")
                     .append("Ano: ").append(livro.getAno()).append("\n");
         }
 
@@ -322,7 +322,7 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
     private javax.swing.JButton botaoLimpar;
     private javax.swing.JButton botaoListar;
     private javax.swing.JTextField codigoLivro;
-    private javax.swing.JTextField isbn;
+    private javax.swing.JTextField editora;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -346,9 +346,9 @@ public class TelaManutencaoLivros extends javax.swing.JFrame {
         throw new UnsupportedOperationException("Unimplemented method 'getAutor'");
     }
 
-    public String getISBN() {
+    public String getEditora() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getISBN'");
+        throw new UnsupportedOperationException("Unimplemented method 'getEditora'");
     }
 
     public String getAno() {
